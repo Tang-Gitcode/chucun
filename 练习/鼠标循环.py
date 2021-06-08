@@ -5,6 +5,7 @@ import random
 import time
 
 
+C
 while True:
     x = random.randint(-300, 300)
     y = random.randint(-300, 300)
