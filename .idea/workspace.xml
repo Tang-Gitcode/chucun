@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3c8900e-d32a-4356-bd35-da73babc9443" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d3c8900e-d32a-4356-bd35-da73babc9443" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +85,7 @@
       <recent name="D:\PyCharm\chucun\文件处理" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.coroutines_2">
+  <component name="RunManager" selected="Python.one">
     <configuration name="画图软件开发" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="chucun" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -727,7 +724,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="one" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="chucun" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -735,12 +732,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/第二章/资料/pro_gui" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/第二章/资料/pro_gui/pen.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/one.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -795,11 +792,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.one" />
         <item itemvalue="Python.coroutines_2" />
         <item itemvalue="Python.画图软件开发" />
         <item itemvalue="Python.pytest1" />
         <item itemvalue="Python.tank25" />
-        <item itemvalue="Python.pen" />
       </list>
     </recent_temporary>
   </component>
@@ -884,7 +881,7 @@
       <workItem from="1624235187846" duration="16378000" />
       <workItem from="1624322487431" duration="7910000" />
       <workItem from="1624409318056" duration="4793000" />
-      <workItem from="1627113805656" duration="4198000" />
+      <workItem from="1627113805656" duration="4443000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1622804528514</created>
@@ -914,7 +911,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627115187068</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="07.24第二次提交">
+      <created>1627118583413</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1627118583413</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -940,10 +944,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623396282595" />
-    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1627115186378">
+    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1627118582763">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1627115186378" />
+    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1627118582763" />
     <state x="560" y="111" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1623116177037" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1623977154713">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -963,25 +967,25 @@
     </state>
     <state x="820" y="401" key="Github.ShareDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1627118272067" />
     <state x="820" y="404" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620790309208" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1627115189498">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1627118693791">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1627115189498" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1627118693791" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1624453823776" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1627115189498">
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1627118693791">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1627115189498" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1627118693791" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1624453823775" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1627115189498">
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1627118693791">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1627115189498" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1627118693791" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1624453823775" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1627115189498">
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1627118693791">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1627115189498" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1627118693791" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1624453823775" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1623407877077">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -1043,6 +1047,7 @@
     <SUITE FILE_PATH="coverage/git_chucun$__.coverage" NAME="颜色_文本选择框_读取文件内容 Coverage Results" MODIFIED="1624065749434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI编程" />
     <SUITE FILE_PATH="coverage/chucun$New_04_16.coverage" NAME="New_04.16 Coverage Results" MODIFIED="1618533982289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sass" />
     <SUITE FILE_PATH="coverage/git_chucun$Flask.coverage" NAME="第一个Flask应用 Coverage Results" MODIFIED="1623112842741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Flask" />
+    <SUITE FILE_PATH="coverage/chucun$one.coverage" NAME="one Coverage Results" MODIFIED="1627118693781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/chucun$__1_.coverage" NAME="测试参数的传递 (1) Coverage Results" MODIFIED="1618567708538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sass" />
     <SUITE FILE_PATH="coverage/git_chucun$test.coverage" NAME="test Coverage Results" MODIFIED="1624101460797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Flask" />
     <SUITE FILE_PATH="coverage/git_chucun$pen.coverage" NAME="pen Coverage Results" MODIFIED="1624328639243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/第二章/资料/pro_gui" />
