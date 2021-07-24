@@ -18,5 +18,4 @@ with open(r"a.dat", "rb") as f:
 
     print(b1), print(b2), print(b3)
 
-
     print(id(a1)), print(id(b1))
