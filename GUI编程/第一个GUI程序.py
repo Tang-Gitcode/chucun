@@ -1,4 +1,4 @@
-#测试第一个GUI程序
+# 测试第一个GUI程序
 from tkinter import *
 from tkinter import messagebox
 
