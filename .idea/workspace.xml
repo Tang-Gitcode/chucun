@@ -932,6 +932,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="07.24第二次提交" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="175" key="#Deployment" timestamp="1627118755302">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="552" y="175" key="#Deployment/0.0.1920.1032@0.0.1920.1032" timestamp="1627118755302" />
     <state x="552" y="178" key="#Notifications" timestamp="1619277752073">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -944,10 +948,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623396282595" />
-    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1627118582763">
+    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1627118798367">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1627118582763" />
+    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1627118798367" />
     <state x="560" y="111" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1623116177037" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1623977154713">
       <screen x="0" y="0" width="1920" height="1040" />
