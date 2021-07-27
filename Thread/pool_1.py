@@ -31,3 +31,10 @@ if __name__ == "__main__":
 
     # 回收进程池
     pool.join()
+
+x = "The are %d types of people." % 10
+binary = "binary"
+do_not = "don't"
+y = "Those who know %s and those who %s." % (binary, do_not)
+print(x)
+print(y)
