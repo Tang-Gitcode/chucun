@@ -807,7 +807,7 @@
       <workItem from="1628123519435" duration="688000" />
       <workItem from="1628210581402" duration="598000" />
       <workItem from="1628555944105" duration="606000" />
-      <workItem from="1628641777476" duration="19819000" />
+      <workItem from="1628641777476" duration="20067000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1622804528514</created>
@@ -879,7 +879,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628676520017</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="08.11对列表进行循环遍历的练习">
+      <created>1628677039130</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628677039130</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -917,10 +924,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623396282595" />
-    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1628676519146">
+    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1628677038186">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1628676519146" />
+    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1628677038186" />
     <state x="560" y="111" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1623116177037" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1623977154713">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -993,10 +1000,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="806" y="434" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623976825659" />
-    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1628677022607">
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1628677103080">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1628677022607" />
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1628677103080" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1623371387080" />
     <state x="652" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1628641777453">
       <screen x="0" y="0" width="1920" height="1032" />
