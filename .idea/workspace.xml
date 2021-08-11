@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3c8900e-d32a-4356-bd35-da73babc9443" name="Default Changelist" comment="08.11对列表的练习">
-      <change afterPath="$PROJECT_DIR$/练习/sort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/练习/sort_test.py" afterDir="false" />
+    <list default="true" id="d3c8900e-d32a-4356-bd35-da73babc9443" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/练习/cycle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/练习/cycle_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,29 +90,7 @@
       <recent name="D:\Python\chucun\Thread" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.sort_test">
-    <configuration name="鼠标循环" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="chucun" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/练习" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/练习/鼠标循环.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.cycle_test">
     <configuration name="序列化和反序列化" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="chucun" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -619,7 +597,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="cycle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="chucun" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -632,7 +610,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/练习/list.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/练习/cycle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cycle_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="chucun" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/练习" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/练习/cycle_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -709,11 +709,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cycle_test" />
+        <item itemvalue="Python.cycle" />
         <item itemvalue="Python.sort_test" />
         <item itemvalue="Python.sort" />
         <item itemvalue="Python.list_test" />
-        <item itemvalue="Python.鼠标循环" />
-        <item itemvalue="Python.list" />
       </list>
     </recent_temporary>
   </component>
@@ -809,7 +809,7 @@
       <workItem from="1628123519435" duration="688000" />
       <workItem from="1628210581402" duration="598000" />
       <workItem from="1628555944105" duration="606000" />
-      <workItem from="1628641777476" duration="15772000" />
+      <workItem from="1628641777476" duration="19256000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1622804528514</created>
@@ -867,7 +867,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628664768313</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="08.11对列表排序的练习">
+      <created>1628672922447</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1628672922447</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -884,7 +891,8 @@
     <MESSAGE value="07.24第三次提交" />
     <MESSAGE value="07.24第四次提交" />
     <MESSAGE value="08.11对列表的练习" />
-    <option name="LAST_COMMIT_MESSAGE" value="08.11对列表的练习" />
+    <MESSAGE value="08.11对列表排序的练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="08.11对列表排序的练习" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="175" key="#Deployment" timestamp="1627118755302">
@@ -903,10 +911,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623396282595" />
-    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1628664780697">
+    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1628672921515">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1628664780697" />
+    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1628672921515" />
     <state x="560" y="111" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1623116177037" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1623977154713">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -926,25 +934,25 @@
     </state>
     <state x="820" y="401" key="Github.ShareDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1627118272067" />
     <state x="820" y="404" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620790309208" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1628672765536">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1628676350638">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1628672765536" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1628676350638" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1624453823776" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1628672765536">
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1628676350638">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1628672765536" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1628676350638" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1624453823775" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1628672765535">
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1628676350638">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1628672765535" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1628676350638" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1624453823775" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1628672765536">
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1628676350638">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1628672765536" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1628676350638" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1624453823775" />
     <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1628663208910">
       <screen x="0" y="0" width="1920" height="1032" />
@@ -979,10 +987,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="806" y="434" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623976825659" />
-    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1628664793571">
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2" timestamp="1628672928735">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1628664793571" />
+    <state x="552" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1628672928735" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1623371387080" />
     <state x="652" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1628641777453">
       <screen x="0" y="0" width="1920" height="1032" />
@@ -994,10 +1002,10 @@
     </state>
     <state x="752" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1032@0.0.1920.1032" timestamp="1628664741863" />
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1623116330131" />
-    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup" timestamp="1628670798743">
+    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup" timestamp="1628673967843">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1628670798743" />
+    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1628673967843" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1624273950406" />
   </component>
   <component name="XDebuggerManager">
@@ -1039,6 +1047,7 @@
     <SUITE FILE_PATH="coverage/git_chucun$call.coverage" NAME="call方法和可调用对象 Coverage Results" MODIFIED="1624273186125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/面向对象" />
     <SUITE FILE_PATH="coverage/git_chucun$Grid.coverage" NAME="Grid布局 Coverage Results" MODIFIED="1623925020191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI编程" />
     <SUITE FILE_PATH="coverage/git_chucun$lambda.coverage" NAME="lambda表达式 Coverage Results" MODIFIED="1623912627441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI编程" />
+    <SUITE FILE_PATH="coverage/chucun$cycle.coverage" NAME="cycle Coverage Results" MODIFIED="1628675107263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/练习" />
     <SUITE FILE_PATH="coverage/chucun$print_2.coverage" NAME="print_2 Coverage Results" MODIFIED="1627376826274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/练习" />
     <SUITE FILE_PATH="coverage/chucun$New_04_15.coverage" NAME="New_04.15 Coverage Results" MODIFIED="1618534089850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sass" />
     <SUITE FILE_PATH="coverage/git_chucun$pack.coverage" NAME="pack布局 Coverage Results" MODIFIED="1623287334476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI编程" />
@@ -1050,6 +1059,7 @@
     <SUITE FILE_PATH="coverage/chucun$print_3.coverage" NAME="print_3 Coverage Results" MODIFIED="1627633890890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/练习" />
     <SUITE FILE_PATH="coverage/chucun$one.coverage" NAME="one Coverage Results" MODIFIED="1627118693781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/chucun$string.coverage" NAME="string Coverage Results" MODIFIED="1627375379933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/练习" />
+    <SUITE FILE_PATH="coverage/chucun$cycle_test.coverage" NAME="cycle_test Coverage Results" MODIFIED="1628676350634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/练习" />
     <SUITE FILE_PATH="coverage/git_chucun$test.coverage" NAME="test Coverage Results" MODIFIED="1624101460797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Flask" />
     <SUITE FILE_PATH="coverage/git_chucun$pen.coverage" NAME="pen Coverage Results" MODIFIED="1624328639243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/第二章/资料/pro_gui" />
     <SUITE FILE_PATH="coverage/chucun$.coverage" NAME="鼠标循环 Coverage Results" MODIFIED="1628664196205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/练习" />
