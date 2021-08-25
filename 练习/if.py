@@ -197,3 +197,5 @@ if "火龙果" in favorite_fruits:
 if "山竹" in favorite_fruits:
     print("我喜欢山竹")
 print("这就是我喜欢的水果")
+
+
