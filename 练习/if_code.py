@@ -199,3 +199,84 @@ if "山竹" in favorite_fruits:
 print("这就是我喜欢的水果")
 
 
+# 检查特殊元素
+foods = ["辣椒粉", "花椒粉", "胡椒粉"]
+for food in foods:
+    print(f"加{food}")
+print("\n这就是我的披萨")
+
+# 再添加一条if判断
+foods = ["辣椒粉", "花椒粉", "胡椒粉"]
+for food in foods:
+    if food == "花椒粉":
+        print("不好意思，我们没有花椒粉了")
+    else:
+        print(f"加{food}")
+print("\n这就是我的披萨")
+
+
+# 确定列表不是空的
+foods = []
+if foods:
+    for food in foods:
+        print(f"加{food}")
+    print("\n这就是我的披萨")
+else:
+    print("你确定要普通披萨吗")
+
+
+# 使用多个列表
+my_foods = ["青椒", "洋葱", "芝士",
+            "辣椒粉", "胡椒粉", "花椒粉"]
+
+your_foods = ["洋葱", "炸酸奶", "青椒"]
+for your_food in your_foods:
+    if your_food in my_foods:
+        print(f"加{your_food}")
+    else:
+        print(f"不好意思，本店没有{your_food}")
+print("\n这就是我的披萨")
+
+
+# 练习
+names = ["tang", "zhan", "hao", "tao", "admin"]
+for name in names:
+    print(f"欢迎你，{name}")
+print("\n这就是我的网站")
+
+for name in names:
+    if name == "admin":
+        print(f"您好，{name},你想查看状态报告吗")
+    else:
+        print(f"你好，{name}，谢谢你再次登录")
+print(f"这就是我的网站")
+
+names = []
+if names:
+    for name in names:
+        print(f"欢迎你，{name}")
+    print("\n这就是我的网站")
+else:
+    print("我们需要找一些用户")
+
+
+current_users = ["tang", "zhan", "hao", "tao", "can"]
+new_users = ["feng", "hao", "kai", "tang", "li"]
+for new_user in new_users:
+    if new_user in current_users:
+        print(f"用户名{new_user}已被使用，请使用其他的用户名")
+    else:
+        print(f"用户名{new_user}未被使用，可放心使用")
+print("\n这就是我的用户")
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for num in nums:
+    if num == 1:
+        print(f"{num}st")
+    elif num == 2:
+        print(f"{num}nd")
+    elif num == 3:
+        print(f"{num}rd")
+    else:
+        print(f"{num}th")
+
