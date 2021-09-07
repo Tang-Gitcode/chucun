@@ -144,3 +144,92 @@ for name in favorite_languages:
     if name in friends:
         language = favorite_languages[name].title()
         print(f"\t{name.title()}, 你喜欢的语言是：{language}!")
+
+
+favorite_languages = {
+    "tang": "python",
+    "zhan": "C",
+    "hao": "ruby",
+    "tao": "java"
+    }
+
+if "erin" not in favorite_languages.keys():
+    print("erin, 请帮我们投票")
+
+
+favorite_languages = {
+    "tang": "python",
+    "zhan": "C",
+    "hao": "ruby",
+    "tao": "java"
+    }
+
+for name in sorted(favorite_languages.keys()):
+    print(f"{name.title()}, 谢谢你帮我们投票")
+
+
+favorite_languages = {
+    "tang": "python",
+    "zhan": "C",
+    "hao": "ruby",
+    "tao": "java"
+    }
+print("已经提到了以下几种语言：")
+for name in favorite_languages.values():
+    print(name.title())
+
+favorite_languages = {
+    "tang": "python",
+    "zhan": "C",
+    "hao": "java",
+    "tao": "java"
+    }
+
+print("已经提到了以下几种语言：")
+for name in set(favorite_languages.values()):
+    print(name.title())
+
+languages = {"java", "c", "python", "ruby"}
+print(languages)
+
+
+# 练习
+favorite_languages = {
+    "tang": "python",
+    "zhan": "C",
+    "hao": "java",
+    "tao": "java"
+    }
+for name in favorite_languages:
+    print(f"{name.title()}喜欢的语言是{favorite_languages[name]}")
+
+# 河流，用字典表示
+rivers = {
+    "nlie": "egypt",
+    "Yellow River": "china",
+    "Mississippi River": "America"
+    }
+
+# 遍历循环
+for name in rivers:
+    print(f"{name.title()}流经{rivers[name].title()}")
+
+# 打印河流名字
+for name in rivers.keys():
+    print(name.title())
+
+# 打印国家名字
+for name in rivers.values():
+    print(name.title())
+
+
+favorite_languages = {
+    "tang": "python",
+    "zhan": "C",
+    "hao": "java",
+    "tao": "java"
+    }
+for name in favorite_languages:
+    print(f"{name.title()}， 谢谢你帮我们投票")
+if "nali" not in favorite_languages:
+    print("nali请你帮我们投票")
