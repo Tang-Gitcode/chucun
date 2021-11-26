@@ -14,7 +14,7 @@ def test1(value):
 s1 = Scale(root, from_=10, to=50, length=200, tickinterval=5, orient=HORIZONTAL, command=test1)
 s1.pack()
 
-a= Label(root, text="百战程序员", width=10, height=1, bg="black", fg="white")
+a= Label(root, text="程序员", width=10, height=1, bg="black", fg="white")
 a.pack()
 
 root.title("滑块")

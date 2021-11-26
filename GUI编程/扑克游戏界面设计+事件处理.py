@@ -14,7 +14,7 @@ class Application(Frame):
         # self.Photo = PhotoImage(file="img/puke/puke1.gif")
         # self.puke1 = Label(self.master, image=self.photo)
         # self.puke1.place(x=10, y=50)
-        self.photos = [PhotoImage(file="../imgs/puke/puke"+str(i+1)+".gif") for i in range(10)]
+        self.photos = [PhotoImage(file="d://Python/chucun/imgs/puke/puke"+str(i+1)+".gif") for i in range(10)]
         self.pukes = [Label(self.master, image=self.photos[i]) for i in range(10)]
         for i in range(10):
             self.pukes[i].place(x=10+i*30, y=50)

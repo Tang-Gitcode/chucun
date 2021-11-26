@@ -1,5 +1,5 @@
-# coding=
-"""±àĞ´Ò»¸ö¼ÇÊÂ±¾³ÌĞò"""
+# coding=utf-8
+"""ç¼–å†™ä¸€ä¸ªè®°äº‹æœ¬ç¨‹åº"""
 
 
 from tkinter.filedialog import *
@@ -9,49 +9,49 @@ from tkinter import *
 class Application(Frame):
 
     def __init__(self, master=None):
-        super().__init__(master)            # super()´ú±íµÄÊÇ¸¸ÀàµÄ¶¨Òå¶ø²»ÊÇ¸¸Àà¶ÔÏó
+        super().__init__(master)            # super()ä»£è¡¨çš„æ˜¯çˆ¶ç±»çš„å®šä¹‰è€Œä¸æ˜¯çˆ¶ç±»å¯¹è±¡
         self.master = master
         self.pack()
         self.createWidget()
 
     def createWidget(self):
-        # ´´½¨Ö÷²Ëµ¥À¸
+        # åˆ›å»ºä¸»èœå•æ 
         menuber = Menu(root)
 
-        # ´´½¨×Ó²Ëµ¥
+        # åˆ›å»ºå­èœå•
         menuFlie = Menu(menuber)
         menuEdit = Menu(menuber)
         menuHelp = Menu(menuber)
 
-        # ½«×Ó²Ëµ¥¼ÓÈëµ½Ö÷²Ëµ¥À¸
-        menuber.add_cascade(label="ÎÄ¼ş(F)", menu=menuFlie)
-        menuber.add_cascade(label="±à¼­(E)", menu=menuEdit)
-        menuber.add_cascade(label="°ïÖú(H)", menu=menuHelp)
+        # å°†å­èœå•åŠ å…¥åˆ°ä¸»èœå•æ 
+        menuber.add_cascade(label="æ–‡ä»¶(F)", menu=menuFlie)
+        menuber.add_cascade(label="ç¼–è¾‘(E)", menu=menuEdit)
+        menuber.add_cascade(label="å¸®åŠ©(H)", menu=menuHelp)
 
-        # Ìí¼Ó²Ëµ¥Ïî
-        menuFlie.add_command(label="ĞÂ½¨", accelerator="ctrl+n", command=self.test)
-        menuFlie.add_command(label="´ò¿ª", accelerator="ctrl+o", command=self.openfile)
-        menuFlie.add_command(label="±£´æ", accelerator="ctrl+s", command=self.savefile)
-        menuFlie.add_separator()    # Ìí¼Ó·Ö¸îÏß
-        menuFlie.add_command(label="ÍË³ö", accelerator="ctrl+q", command=self.exit)
+        # æ·»åŠ èœå•é¡¹
+        menuFlie.add_command(label="æ–°å»º", accelerator="ctrl+n", command=self.test)
+        menuFlie.add_command(label="æ‰“å¼€", accelerator="ctrl+o", command=self.openfile)
+        menuFlie.add_command(label="ä¿å­˜", accelerator="ctrl+s", command=self.savefile)
+        menuFlie.add_separator()    # æ·»åŠ åˆ†å‰²çº¿
+        menuFlie.add_command(label="é€€å‡º", accelerator="ctrl+q", command=self.exit)
 
-        # ½«Ö÷²Ëµ¥À¸¼Óµ½¸ù´°¿Ú
+        # å°†ä¸»èœå•æ åŠ åˆ°æ ¹çª—å£
         root["menu"] = menuber
 
-        # ÎÄ±¾±à¼­Çø
+        # æ–‡æœ¬ç¼–è¾‘åŒº
         self.textpad = Text(root, width=50, height=30)
         self.textpad.pack()
 
-        # ´´½¨ÉÏÏÂ²Ëµ¥
+        # åˆ›å»ºä¸Šä¸‹èœå•
         self.contextMenu = Menu(root)
-        self.contextMenu.add_command(label="±³¾°ÑÕÉ«", command=self.test)
+        self.contextMenu.add_command(label="èƒŒæ™¯é¢œè‰²", command=self.test)
 
-        # ÎªÓÒ¼ü°ó¶¨ÊÂ¼ş
+        # ä¸ºå³é”®ç»‘å®šäº‹ä»¶
         root.bind("<Button-3>", self.createContextMenu)
 
     def openfile(self):
-        self.textpad.delete("1.0", "end")       # °Ñtext¿Ø¼şÖĞËùÓĞµÄÄÚÈİÇå¿Õ
-        with askopenfile(title="´ò¿ªÎÄ±¾ÎÄ¼ş") as f:
+        self.textpad.delete("1.0", "end")       # æŠŠtextæ§ä»¶ä¸­æ‰€æœ‰çš„å†…å®¹æ¸…ç©º
+        with askopenfile(title="æ‰“å¼€æ–‡æœ¬æ–‡ä»¶") as f:
             # print(f.read())
             self.textpad.insert(INSERT, f.read())
             self.filename = f.name
@@ -68,30 +68,13 @@ class Application(Frame):
         pass
 
     def createContextMenu(self, event):
-        # ²Ëµ¥ÔÚÊó±êÓÒ¼üµ¥»÷µÄ×ø±ê´¦ÏÔÊ¾
+        # èœå•åœ¨é¼ æ ‡å³é”®å•å‡»çš„åæ ‡å¤„æ˜¾ç¤º
         self.contextMenu.post(event.x_root, event.y_root)
 
 
 if __name__ == "__main__":
     root = Tk()
-    root.title("¼ÇÊÂ±¾")
+    root.title("è®°äº‹æœ¬")
     root.geometry("400x300+200+300")
     app = Application(master=root)
     root.mainloop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
