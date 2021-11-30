@@ -282,3 +282,6 @@ class TestCase(unittest.TestCase):
 if __name__ == '__main__':
     print("---------------------TestCase-----------------")
     unittest.main()
+
+
+print("测试")
