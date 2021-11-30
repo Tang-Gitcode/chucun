@@ -92,22 +92,27 @@ class TestCase(unittest.TestCase):
 
     def test_goods(self):
         """创建商品"""
+        # 加载谷歌浏览器
         driver = webdriver.Chrome()
-
+        # 加载地址
         driver.get("http://t-admin.helitong.cn/login")
-
+        # 最大化界面
         driver.maximize_window()
-
+        # 输入登录账号
         driver.find_element(
             By.XPATH, "//input[@placeholder='请输入登录账号']").send_keys("13530600569")
+        # 输入登录密码
         driver.find_element(
             By.XPATH, "//input[@placeholder='请输入登录密码']").send_keys("t123456")
+        # 点击登录按钮
         driver.find_element(By.XPATH, '//button[span="登录"]').click()
         time.sleep(2)
 
         """编辑基本信息"""
+        # 点击商品管理菜单
         driver.find_element(By.XPATH, "//div[span='商品管理']").click()
         time.sleep(2)
+        # 重新加载商品管理页面
         driver.get("http://t-admin.helitong.cn/goods/creatGoods")
         time.sleep(1)
         # driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div[1]/div/div[1]/div/div/ul/li[3]/ul/li[1]").click()
@@ -143,6 +148,7 @@ class TestCase(unittest.TestCase):
         # 商品渠道
         driver.find_element(By.XPATH, "//form//div[3]//span/span").click()
         time.sleep(2)
+        # 选择商品来源
         driver.find_element(By.XPATH, "//ul/li[span='自有']").click()
         time.sleep(0.2)
 
