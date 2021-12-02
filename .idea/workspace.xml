@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d3c8900e-d32a-4356-bd35-da73babc9443" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/功能自动化/TestCase/Test_JD.py" beforeDir="false" afterPath="$PROJECT_DIR$/功能自动化/TestCase/Test_JD.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -735,7 +736,7 @@
       <workItem from="1638339352926" duration="249000" />
       <workItem from="1638341266597" duration="904000" />
       <workItem from="1638416262437" duration="11593000" />
-      <workItem from="1638452972352" duration="2303000" />
+      <workItem from="1638452972352" duration="2660000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1622804528514</created>
