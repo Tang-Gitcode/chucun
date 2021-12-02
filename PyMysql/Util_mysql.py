@@ -5,7 +5,11 @@ from pymysql import cursors
 # 定义连接方法
 def get_object():
     # 获取连接对象，建立数据库连接（host：地址，port:接口，user:账号，passwd:密码，db：数据库名）
-    obj = pymysql.connect(host="rm-uf67h55frc456p9ij5o.mysql.rds.aliyuncs.com", port=3306, user="tst_sass", passwd="sass#123123", db="sass")
+    obj = pymysql.connect(host="rm-uf67h55frc456p9ij5o.mysql.rds.aliyuncs.com", 
+                          port=3306, 
+                          user="tst_sass", 
+                          passwd="sass#123123", 
+                          db="sass")
     return obj
 
 
