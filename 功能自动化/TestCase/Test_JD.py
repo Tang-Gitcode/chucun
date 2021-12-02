@@ -39,3 +39,4 @@ class TestJD(unittest.TestCase):
         # 点击登录
         driver.find_element(By.XPATH, "//div[@class='van-button__text']").click()
         sleep(2)
+print("---------------------测试--------------------")
