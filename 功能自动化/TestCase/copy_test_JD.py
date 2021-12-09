@@ -1,7 +1,14 @@
 # 京东商品下单
 
+from os import write
+import time
 from types import DynamicClassAttribute
 import unittest
+import xlrd
+import xlwt
+import openpyxl
+from xlutils.copy import copy
+import os.path
 from unittest.main import main
 from selenium import webdriver
 from time import sleep
@@ -38,7 +45,7 @@ class TestJD(unittest.TestCase):
         sleep(2)
 
     def test_jdGoods(self):
-       
+
         while True:
 
             """购物车"""
@@ -103,6 +110,30 @@ class TestJD(unittest.TestCase):
                     goods_name = driver.find_element(By.XPATH, "//div[@class='van-card__content']//div/div").text
                     print(f"下单成功：\t订单编号：{order_sn}\t商品名称：{goods_name}")
 
+
+                    file_txt = open("C:/Users/administered/Desktop/1.txt", mode="a", encoding='utf-8')
+                    file_txt.write(f"{order_sn}\t{goods_name}\n")
+                    file_txt.close()
+
+                    datas = []
+                    def read():
+                        with open("C:/Users/administered/Desktop/1.txt", "r", encoding="utf-8") as f:
+                            for info in f:
+                                datas.append(info)
+
+                        
+                    def write_excel():
+                        workbook=openpyxl.Workbook()        #创建一个excel文件
+                        sheet = workbook.create_sheet('new')#添加一个sheet
+                        for j,data in enumerate(datas):     #写入数据
+                            for i in range(len(data)):
+                                sheet.cell(j+1, i+1, data[i])
+
+                        workbook.save('C:/Users/administered/Desktop/output.xls')
+                    read()
+                    write_excel()
+
+
                     # 返回上一步
                     driver.find_element(By.XPATH, " //div[@class='van-cell']").click()
                     sleep(1)
@@ -124,8 +155,28 @@ class TestJD(unittest.TestCase):
                     sleep(1)
 
                     """获取商品名称"""
-                    text = driver.find_element(By.XPATH, " //div[@class='van-card__content']//div/div").text
-                    print(f"下单失败：\t商品名称：{text}")
+                    failure_goods = driver.find_element(By.XPATH, " //div[@class='van-card__content']//div/div").text
+                    print(f"下单失败：\t商品名称：{failure_goods}")
+                    file_txt = open("C:/Users/administered/Desktop/1.txt", mode="a", encoding='utf-8')
+                    file_txt.write(f"{failure_goods}\n")
+                    file_txt.close()
+
+                    datas = []
+                    def read():
+                        with open("C:/Users/administered/Desktop/1.txt", "r", encoding="utf-8") as f:
+                            for info in f:
+                                datas.append(info)
+
+                        
+                    def write_excel():
+                        workbook = openpyxl.Workbook()      #创建一个excel文件
+                        sheet = workbook.create_sheet('new')#添加一个sheet
+                        for j,data in enumerate(datas):     #写入数据
+                            for i in range(len(data)):
+                                sheet.cell(j+1, i+1, data[i])
+                    read()
+                    write_excel()
+                    
 
                     # 点击编辑
                     driver.find_element(By.XPATH, " //div[span='编辑']").click()
@@ -143,6 +194,8 @@ class TestJD(unittest.TestCase):
                     # 跳出循环
                     continue
 
+
+                
 
     # 用例执行完关闭页面
     def tearDown(self) -> None:
