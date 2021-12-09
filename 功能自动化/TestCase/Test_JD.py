@@ -62,16 +62,6 @@ class TestJD(unittest.TestCase):
         # 输入密码
         driver.find_element(By.XPATH, "//input[@class='password-code-input']").send_keys("201518")
         sleep(1)
-        # driver.find_element(By.XPATH, "//div[@class='password-code-div']//li[2]").send_keys("0")
-        # sleep(1)
-        # driver.find_element(By.XPATH, "//li[@class='password-li'][3]").send_keys("1")
-        # sleep(0.2)
-        # driver.find_element(By.XPATH, "//li[4]").send_keys("5")
-        # sleep(0.2)
-        # driver.find_element(By.XPATH, "//li[5]").send_keys("1")
-        # sleep(0.2)
-        # driver.find_element(By.XPATH, "//li[6]").send_keys("8")
-        # sleep(0.2)
 
         # 确认
         driver.find_element(By.XPATH, "//div[@class='buttons-bar']/button[2]").click()
