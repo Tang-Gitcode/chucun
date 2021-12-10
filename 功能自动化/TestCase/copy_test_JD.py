@@ -4,10 +4,8 @@ from os import write
 import time
 from types import DynamicClassAttribute
 import unittest
-import xlrd
-import xlwt
 import openpyxl
-from xlutils.copy import copy
+import xlrd
 import os.path
 from unittest.main import main
 from selenium import webdriver
@@ -115,22 +113,23 @@ class TestJD(unittest.TestCase):
                     file_txt.write(f"{order_sn}\t{goods_name}\n")
                     file_txt.close()
 
-                    datas = []
-                    def read():
-                        with open("C:/Users/administered/Desktop/1.txt", "r", encoding="utf-8") as f:
-                            for info in f:
-                                datas.append(info)
+                    contents=[]
+                    def read_txt():
+                        data = open(r"C:/Users/administered/Desktop/1.txt","r",encoding="utf-8") #打开txt文件
+                        for i in data:
+                            contents.append(i.split())              #遍历txt文件内容存放到列表
+                            data.close()
+                            print(contents)
 
-                        
                     def write_excel():
-                        workbook=openpyxl.Workbook()        #创建一个excel文件
-                        sheet = workbook.create_sheet('new')#添加一个sheet
-                        for j,data in enumerate(datas):     #写入数据
-                            for i in range(len(data)):
-                                sheet.cell(j+1, i+1, data[i])
+                        wb=openpyxl.Workbook()                      #创建1个工作簿
+                        ws=wb.create_sheet(u"new")                #用工作簿去创建工作表sheet
+                        for i,content in enumerate(contents):
+                            for j in range(len(content)):
+                                ws.cell(i+1, j+1, content[j])         #用工作表sheet调用单元格，写入内容
+                        wb.save("C:/Users/administered/Desktop/output.xlsx")                         #保存文件名
 
-                        workbook.save('C:/Users/administered/Desktop/output.xls')
-                    read()
+                    read_txt()
                     write_excel()
 
 
@@ -161,20 +160,23 @@ class TestJD(unittest.TestCase):
                     file_txt.write(f"{failure_goods}\n")
                     file_txt.close()
 
-                    datas = []
-                    def read():
-                        with open("C:/Users/administered/Desktop/1.txt", "r", encoding="utf-8") as f:
-                            for info in f:
-                                datas.append(info)
+                    contents=[]
+                    def read_txt():
+                        data = open("C:/Users/administered/Desktop/1.txt","r",encoding="utf-8") #打开txt文件
+                        for i in data:
+                            contents.append(i.split())              #遍历txt文件内容存放到列表
+                            # data.close()
+                            # print(contents)
 
-                        
                     def write_excel():
-                        workbook = openpyxl.Workbook()      #创建一个excel文件
-                        sheet = workbook.create_sheet('new')#添加一个sheet
-                        for j,data in enumerate(datas):     #写入数据
-                            for i in range(len(data)):
-                                sheet.cell(j+1, i+1, data[i])
-                    read()
+                        wb=openpyxl.Workbook()                      #创建1个工作簿
+                        ws=wb.create_sheet(u"new")                #用工作簿去创建工作表sheet
+                        for i,content in enumerate(contents):
+                            for j in range(len(content)):
+                                ws.cell(i+1, j+1, content[j])         #用工作表sheet调用单元格，写入内容
+                        wb.save("C:/Users/administered/Desktop/output.xlsx")                         #保存文件名
+
+                    read_txt()
                     write_excel()
                     
 
@@ -194,8 +196,6 @@ class TestJD(unittest.TestCase):
                     # 跳出循环
                     continue
 
-
-                
 
     # 用例执行完关闭页面
     def tearDown(self) -> None:

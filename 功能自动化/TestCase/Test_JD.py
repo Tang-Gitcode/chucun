@@ -2,6 +2,7 @@
 
 from types import DynamicClassAttribute
 import unittest
+import openpyxl
 from unittest.main import main
 from selenium import webdriver
 from time import sleep
@@ -102,6 +103,23 @@ class TestJD(unittest.TestCase):
                     order_sn = driver.find_element(By.XPATH, "//div[@class='van-cell__value']/following::div[37]").text
                     goods_name = driver.find_element(By.XPATH, "//div[@class='van-card__content']//div/div").text
                     print(f"下单成功：\t订单编号：{order_sn}\t商品名称：{goods_name}")
+                    file_book = open("C:/Users/Administrator/Desktop/1.txt", mode="a", encoding="utf-8")
+                    file_book.write(f"{order_sn}\t")
+                    file_book.write(f"{goods_name}\n")
+                    file_book.close()
+
+                    def write_excel():
+                        work_book = openpyxl.Workbook()
+                        sheet = work_book.create_sheet("new")
+                        data = open("C:/Users/Administrator/Desktop/1.txt", "r", encoding="utf-8")
+                        datas = data.readlines()
+                        for i,row in enumerate(datas):
+                            d = row.split()
+                            for j in range(len(d)):
+                                sheet.cell(i+1, j+1, d[i])
+                                work_book.save("C:/Users/Administrator/Desktop/output.xlsx")
+                    write_excel()
+                   
 
                     # 返回上一步
                     driver.find_element(By.XPATH, " //div[@class='van-cell']").click()
@@ -126,6 +144,22 @@ class TestJD(unittest.TestCase):
                     """获取商品名称"""
                     text = driver.find_element(By.XPATH, " //div[@class='van-card__content']//div/div").text
                     print(f"下单失败：\t商品名称：{text}")
+
+                    file_book = open("C:/Users/Administrator/Desktop/1.txt", mode="a", encoding="utf-8")
+                    file_book.write(f"{text}\n")
+                    file_book.close()
+
+                    def write_excel():
+                        work_book = openpyxl.Workbook()
+                        sheet = work_book.create_sheet("new")
+                        data = open("C:/Users/Administrator/Desktop/1.txt", "r", encoding="utf-8")
+                        datas = data.readlines()
+                        for i,row in enumerate(datas):
+                            d = row.split()
+                            for j in range(len(d)):
+                                sheet.cell(i+1, j+1, d[i])
+                                work_book.save("C:/Users/Administrator/Desktop/output.xlsx")
+                    write_excel()
 
                     # 点击编辑
                     driver.find_element(By.XPATH, " //div[span='编辑']").click()
