@@ -108,30 +108,7 @@ class TestJD(unittest.TestCase):
                     goods_name = driver.find_element(By.XPATH, "//div[@class='van-card__content']//div/div").text
                     print(f"下单成功：\t订单编号：{order_sn}\t商品名称：{goods_name}")
 
-
-                    file_txt = open("C:/Users/administered/Desktop/1.txt", mode="a", encoding='utf-8')
-                    file_txt.write(f"{order_sn}\t{goods_name}\n")
-                    file_txt.close()
-
-                    contents=[]
-                    def read_txt():
-                        data = open(r"C:/Users/administered/Desktop/1.txt","r",encoding="utf-8") #打开txt文件
-                        for i in data:
-                            contents.append(i.split())              #遍历txt文件内容存放到列表
-                            data.close()
-                            print(contents)
-
-                    def write_excel():
-                        wb=openpyxl.Workbook()                      #创建1个工作簿
-                        ws=wb.create_sheet(u"new")                #用工作簿去创建工作表sheet
-                        for i,content in enumerate(contents):
-                            for j in range(len(content)):
-                                ws.cell(i+1, j+1, content[j])         #用工作表sheet调用单元格，写入内容
-                        wb.save("C:/Users/administered/Desktop/output.xlsx")                         #保存文件名
-
-                    read_txt()
-                    write_excel()
-
+                   
 
                     # 返回上一步
                     driver.find_element(By.XPATH, " //div[@class='van-cell']").click()
@@ -156,28 +133,6 @@ class TestJD(unittest.TestCase):
                     """获取商品名称"""
                     failure_goods = driver.find_element(By.XPATH, " //div[@class='van-card__content']//div/div").text
                     print(f"下单失败：\t商品名称：{failure_goods}")
-                    file_txt = open("C:/Users/administered/Desktop/1.txt", mode="a", encoding='utf-8')
-                    file_txt.write(f"{failure_goods}\n")
-                    file_txt.close()
-
-                    contents=[]
-                    def read_txt():
-                        data = open("C:/Users/administered/Desktop/1.txt","r",encoding="utf-8") #打开txt文件
-                        for i in data:
-                            contents.append(i.split())              #遍历txt文件内容存放到列表
-                            # data.close()
-                            # print(contents)
-
-                    def write_excel():
-                        wb=openpyxl.Workbook()                      #创建1个工作簿
-                        ws=wb.create_sheet(u"new")                #用工作簿去创建工作表sheet
-                        for i,content in enumerate(contents):
-                            for j in range(len(content)):
-                                ws.cell(i+1, j+1, content[j])         #用工作表sheet调用单元格，写入内容
-                        wb.save("C:/Users/administered/Desktop/output.xlsx")                         #保存文件名
-
-                    read_txt()
-                    write_excel()
                     
 
                     # 点击编辑
