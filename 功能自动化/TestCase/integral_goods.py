@@ -8,6 +8,7 @@ from unittest.main import main
 from selenium import webdriver
 from xlutils.copy import copy
 from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
 
 class integral_Goods(unittest.TestCase):
 
@@ -18,27 +19,33 @@ class integral_Goods(unittest.TestCase):
         global driver
 
         # 加载谷歌浏览器
-        driver = webdriver.Chrome()
+        driver = webdriver.Firefox()
 
         # 窗口最大化
         driver.maximize_window()
 
         # 加载地址
-        driver.get("http://t-mintegral437.helitong.cn/#/Login")
+        driver.get("http://t-mintegral437.helitong.cn/#/Home")
         # 等待时间
         time.sleep(5)
 
 
         """登录"""
-        #输入账号
-        driver.find_element(By.XPATH, "//input[@name='mobile']/following::input[2]").send_keys("13017167459")
+        # 账号
+        driver.find_element(By.XPATH, "//input[@placeholder='请输入登录账号']").send_keys("13017167459")
         time.sleep(1)
         # 输入密码
         driver.find_element(By.NAME, "password").send_keys("t123456")
         time.sleep(1)
+
+        # 滑动验证
+        button = driver.find_element(By.XPATH, "//div[@class='button']")
+        ActionChains(driver).drag_and_drop_by_offset(button,300,0).perform()
+        time.sleep(2)
+
         # 点击登录
-        driver.find_element(By.XPATH, "//button/following::div[10]").click()
-        time.sleep(5)
+        driver.find_element(By.XPATH, "//button[@type='submit']").click()
+        time.sleep(2)
 
         # 跳转到页面底部
         driver.execute_script("var q=document.documentElement.scrollTop=10000")
@@ -149,7 +156,7 @@ class integral_Goods(unittest.TestCase):
                                     # 将xlrd对象变成xlwt
                                     new_work_book = copy(word_book)
                                     # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("12.11")
+                                    new_sheet = new_work_book.get_sheet("12.20")
                                     # 追加内容
                                     new_sheet.write(old_rows, 1, list_order_sn, style)
                                     new_sheet.write(old_rows, 2, list_goods_name, style)
@@ -216,7 +223,7 @@ class integral_Goods(unittest.TestCase):
                                     # 将xlrd对象变成xlwt
                                     new_work_book = copy(word_book)
                                     # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("12.11")
+                                    new_sheet = new_work_book.get_sheet("12.20")
                                     # 追加内容
                                     new_sheet.write(old_rows, 2, list_failure_goods, style)
                                     new_sheet.write(old_rows, 3, "失败", style)
@@ -255,14 +262,20 @@ class integral_Goods(unittest.TestCase):
 
                 if element_login == False:
                     """登录"""
-                    #输入账号
-                    driver.find_element(By.XPATH, "//input[@name='mobile']/following::input[2]").send_keys("13017167459")
+                    # 账号
+                    driver.find_element(By.XPATH, "//input[@placeholder='请输入登录账号']").send_keys("13017167459")
                     time.sleep(1)
                     # 输入密码
                     driver.find_element(By.NAME, "password").send_keys("t123456")
                     time.sleep(1)
+
+                    # 滑动验证
+                    button = driver.find_element(By.XPATH, "//div[@class='button']")
+                    ActionChains(driver).drag_and_drop_by_offset(button,300,0).perform()
+                    time.sleep(2)
+
                     # 点击登录
-                    driver.find_element(By.XPATH, "//button/following::div[10]").click()
+                    driver.find_element(By.XPATH, "//button[@type='submit']").click()
                     time.sleep(2)
                 else:
                     continue
@@ -270,10 +283,10 @@ class integral_Goods(unittest.TestCase):
         except Exception as e:
             print(f"运行失败{e}")
 
-    # 执行完用例后的操作
-    def tearDown(self) -> None:
-        # 关闭页面
-        driver.close()
+    # # 执行完用例后的操作
+    # def tearDown(self) -> None:
+    #     # 关闭页面
+    #     driver.close()
 
 
 # 测试
