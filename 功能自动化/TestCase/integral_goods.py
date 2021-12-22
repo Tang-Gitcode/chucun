@@ -8,6 +8,7 @@ from unittest.main import main
 from selenium import webdriver
 from xlutils.copy import copy
 from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
 
 class integral_Goods(unittest.TestCase):
 
@@ -24,26 +25,52 @@ class integral_Goods(unittest.TestCase):
         driver.maximize_window()
 
         # 加载地址
-        driver.get("http://t-mintegral437.helitong.cn/#/Login")
+        driver.get("http://t-mintegral437.helitong.cn/#/AccountLogin")
         # 等待时间
         time.sleep(5)
 
 
         """登录"""
-        #输入账号
-        driver.find_element(By.XPATH, "//input[@name='mobile']/following::input[2]").send_keys("13017167459")
-        time.sleep(1)
-        # 输入密码
-        driver.find_element(By.NAME, "password").send_keys("t123456")
-        time.sleep(1)
+        # # 账号
+        # driver.find_element(By.XPATH, "//input[@placeholder='请输入登录账号']").send_keys("13017167459")
+        # time.sleep(1)
+        # # 输入密码
+        # driver.find_element(By.NAME, "password").send_keys("t123456")
+        # time.sleep(1)
+
+        # # 滑动验证
+        # button = driver.find_element(By.XPATH, "//div[@class='button']")
+        # ActionChains(driver).drag_and_drop_by_offset(button,300,0).perform()
+        # time.sleep(2)
+
+        # # 点击登录
+        # driver.find_element(By.XPATH, "//button[@type='submit']").click()
+        # time.sleep(5)
+
+        
+        # 手机验证码登录
+        driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
+        time.sleep(2)
+        driver.find_element(By.NAME, "mobile").send_keys("13017167459")
+        time.sleep(2)
+        driver.find_element(By.XPATH, "//div[@class='van-field__button']//span").click()
+        time.sleep(30)
+
         # 点击登录
-        driver.find_element(By.XPATH, "//button/following::div[10]").click()
+        driver.find_element(By.XPATH, "//button[@type='submit']").click()
         time.sleep(5)
 
-        # 跳转到页面底部
-        driver.execute_script("var q=document.documentElement.scrollTop=10000")
-        # driver.execute_script("window.scrollTo(0, document.body.scrollHeight);") 
-        time.sleep(3)
+        button1 = True
+        try:
+
+            # 跳转到页面底部
+            driver.execute_script("var q=document.documentElement.scrollTop=10000")
+            # driver.execute_script("window.scrollTo(0, document.body.scrollHeight);") 
+            time.sleep(3)
+        except:
+            button1 = False
+        if button1 == False:
+            driver.refresh()
 
 
     def test_integralGoods(self):
@@ -149,7 +176,7 @@ class integral_Goods(unittest.TestCase):
                                     # 将xlrd对象变成xlwt
                                     new_work_book = copy(word_book)
                                     # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("12.11")
+                                    new_sheet = new_work_book.get_sheet("Sheet1")
                                     # 追加内容
                                     new_sheet.write(old_rows, 1, list_order_sn, style)
                                     new_sheet.write(old_rows, 2, list_goods_name, style)
@@ -216,7 +243,7 @@ class integral_Goods(unittest.TestCase):
                                     # 将xlrd对象变成xlwt
                                     new_work_book = copy(word_book)
                                     # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("12.11")
+                                    new_sheet = new_work_book.get_sheet("Sheet1")
                                     # 追加内容
                                     new_sheet.write(old_rows, 2, list_failure_goods, style)
                                     new_sheet.write(old_rows, 3, "失败", style)
@@ -255,15 +282,33 @@ class integral_Goods(unittest.TestCase):
 
                 if element_login == False:
                     """登录"""
-                    #输入账号
-                    driver.find_element(By.XPATH, "//input[@name='mobile']/following::input[2]").send_keys("13017167459")
-                    time.sleep(1)
-                    # 输入密码
-                    driver.find_element(By.NAME, "password").send_keys("t123456")
-                    time.sleep(1)
-                    # 点击登录
-                    driver.find_element(By.XPATH, "//button/following::div[10]").click()
+                    # # 账号
+                    # driver.find_element(By.XPATH, "//input[@placeholder='请输入登录账号']").send_keys("13017167459")
+                    # time.sleep(1)
+                    # # 输入密码
+                    # driver.find_element(By.NAME, "password").send_keys("t123456")
+                    # time.sleep(1)
+
+                    # # 滑动验证
+                    # button = driver.find_element(By.XPATH, "//div[@class='button']")
+                    # ActionChains(driver).drag_and_drop_by_offset(button,300,0).perform()
+                    # time.sleep(2)
+
+                    # # 点击登录
+                    # driver.find_element(By.XPATH, "//button[@type='submit']").click()
+                    # time.sleep(5)
+                    
+                    # 手机验证码登录
+                    driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
                     time.sleep(2)
+                    driver.find_element(By.NAME, "mobile").send_keys("13017167459")
+                    time.sleep(2)
+                    driver.find_element(By.XPATH, "//div[@class='van-field__button']//span").click()
+                    time.sleep(30)
+
+                    # 点击登录
+                    driver.find_element(By.XPATH, "//button[@type='submit']").click()
+                    time.sleep(5)
                 else:
                     continue
                 print("运行成功")
@@ -272,8 +317,8 @@ class integral_Goods(unittest.TestCase):
 
     # 执行完用例后的操作
     def tearDown(self) -> None:
-        # 关闭页面
-        driver.close()
+        # 退出浏览器
+        driver.quit()
 
 
 # 测试
