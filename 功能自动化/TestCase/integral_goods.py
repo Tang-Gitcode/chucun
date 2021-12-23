@@ -19,14 +19,13 @@ class integral_Goods(unittest.TestCase):
         global driver
 
         # 加载谷歌浏览器
-        driver = webdriver.Chrome()
+        driver = webdriver.Firefox()
 
         # 窗口最大化
         driver.maximize_window()
 
         # 加载地址
         driver.get("http://t-mintegral437.helitong.cn/#/AccountLogin")
-        # 等待时间
         time.sleep(5)
 
 
