@@ -1,14 +1,17 @@
 """积分商城下单"""
 
+from os import close
 import time
 import unittest
 import xlrd
+from xlrd.formula import Ref3D
 import xlwt
 from unittest.main import main
 from selenium import webdriver
 from xlutils.copy import copy
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
+from xlwt.Style import colour_index_func
 
 class integral_Goods(unittest.TestCase):
 
@@ -19,7 +22,7 @@ class integral_Goods(unittest.TestCase):
         global driver
 
         # 加载谷歌浏览器
-        driver = webdriver.Firefox()
+        driver = webdriver.Chrome()
 
         # 窗口最大化
         driver.maximize_window()
@@ -66,6 +69,7 @@ class integral_Goods(unittest.TestCase):
             driver.execute_script("var q=document.documentElement.scrollTop=10000")
             # driver.execute_script("window.scrollTo(0, document.body.scrollHeight);") 
             time.sleep(3)
+
         except:
             button1 = False
         if button1 == False:
@@ -125,7 +129,7 @@ class integral_Goods(unittest.TestCase):
 
                             # 确认密码
                             driver.find_element(By.XPATH, "//div[@class='buttons-bar']/button[2]").click()
-                            time.sleep(3)
+                            time.sleep(5)
 
                             element_click = True
                             try:
@@ -152,7 +156,7 @@ class integral_Goods(unittest.TestCase):
 
                                 try:
                                     # 打开excel
-                                    word_book = xlrd.open_workbook('C:/Users/Administrator/Desktop/output.xls', formatting_info=True)
+                                    word_book = xlrd.open_workbook('output.xls', formatting_info=True)
                                     
                                     #格式信息
                                     style = xlwt.XFStyle()
@@ -175,12 +179,15 @@ class integral_Goods(unittest.TestCase):
                                     # 将xlrd对象变成xlwt
                                     new_work_book = copy(word_book)
                                     # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("Sheet1")
+                                    new_sheet = new_work_book.get_sheet("12.24")
                                     # 追加内容
+                                    n = "%03d" % i
+                                    new_sheet.write(old_rows, 0, n, style)
                                     new_sheet.write(old_rows, 1, list_order_sn, style)
                                     new_sheet.write(old_rows, 2, list_goods_name, style)
+                                    new_sheet.write(old_rows, 3, "成功", style)
                                     # 保存                                 
-                                    new_work_book.save('C:/Users/Administrator/Desktop/output.xls')
+                                    new_work_book.save('output.xls')
 
                                     print('追加成功！')
                                 except Exception as e: 
@@ -220,9 +227,11 @@ class integral_Goods(unittest.TestCase):
 
                                 try:
                                     # 打开excel
-                                    word_book = xlrd.open_workbook('C:/Users/Administrator/Desktop/output.xls', formatting_info=True)
+                                    word_book = xlrd.open_workbook('output.xls', formatting_info=True)
+                                    # 字体颜色
+                                    c = "font:colour_index red;"
                                     #格式信息
-                                    style = xlwt.XFStyle()
+                                    style = xlwt.XFStyle(c)
                                     #字体基本设置
                                     font = xlwt.Font()
                                     # 设置字体
@@ -242,13 +251,15 @@ class integral_Goods(unittest.TestCase):
                                     # 将xlrd对象变成xlwt
                                     new_work_book = copy(word_book)
                                     # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("Sheet1")
+                                    new_sheet = new_work_book.get_sheet("12.24")
                                     # 追加内容
+                                    n = "%03d" % i
+                                    new_sheet.write(old_rows, 0, n, style)
                                     new_sheet.write(old_rows, 2, list_failure_goods, style)
                                     new_sheet.write(old_rows, 3, "失败", style)
                                     new_sheet.write(old_rows, 4, "下单失败", style)
                                     # 保存
-                                    new_work_book.save('C:/Users/Administrator/Desktop/output.xls')
+                                    new_work_book.save('output.xls')
                                     print('追加成功！')
                                 except Exception as e: 
                                     print('追加失败！',e)
