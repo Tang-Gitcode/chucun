@@ -11,7 +11,7 @@ from selenium import webdriver
 from xlutils.copy import copy
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
-from xlwt.Style import colour_index_func
+from xlwt.Style import colour_index_func, easyxf
 
 class integral_Goods(unittest.TestCase):
 
@@ -53,7 +53,7 @@ class integral_Goods(unittest.TestCase):
         # 手机验证码登录
         driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
         time.sleep(2)
-        driver.find_element(By.NAME, "mobile").send_keys("13017167459")
+        driver.find_element(By.NAME, "mobile").send_keys("16620129737")
         time.sleep(2)
         driver.find_element(By.XPATH, "//div[@class='van-field__button']//span").click()
         time.sleep(30)
@@ -151,7 +151,7 @@ class integral_Goods(unittest.TestCase):
                                 goods_name = driver.find_element(By.XPATH, "//div[@class='van-card__content']//div/div").text
                                 list_goods_name = ''.join(goods_name)
                                 print(f"下单成功：\t订单编号：{list_order_sn}")
-                                print(f"下单成功：\t商品名称：{list_goods_name}")
+                                print(f"\t商品名称：{list_goods_name}")
                                 time.sleep(3)
 
                                 try:
@@ -181,7 +181,7 @@ class integral_Goods(unittest.TestCase):
                                     # 添加内容到指定工作表
                                     new_sheet = new_work_book.get_sheet("12.24")
                                     # 追加内容
-                                    n = "%03d" % i
+                                    n = "%03d" % (i+1)
                                     new_sheet.write(old_rows, 0, n, style)
                                     new_sheet.write(old_rows, 1, list_order_sn, style)
                                     new_sheet.write(old_rows, 2, list_goods_name, style)
@@ -228,14 +228,14 @@ class integral_Goods(unittest.TestCase):
                                 try:
                                     # 打开excel
                                     word_book = xlrd.open_workbook('output.xls', formatting_info=True)
-                                    # 字体颜色
-                                    c = "font:colour_index red;"
                                     #格式信息
-                                    style = xlwt.XFStyle(c)
+                                    style = xlwt.XFStyle()
                                     #字体基本设置
                                     font = xlwt.Font()
                                     # 设置字体
                                     font.name = u'等线'
+                                    # 字体颜色
+                                    font.colour_index = 2       # 指定colour_index索引
                                     # 设置字号
                                     font.height= 220
                                     style.font = font
@@ -253,7 +253,7 @@ class integral_Goods(unittest.TestCase):
                                     # 添加内容到指定工作表
                                     new_sheet = new_work_book.get_sheet("12.24")
                                     # 追加内容
-                                    n = "%03d" % i
+                                    n = "%03d" % (i+1)
                                     new_sheet.write(old_rows, 0, n, style)
                                     new_sheet.write(old_rows, 2, list_failure_goods, style)
                                     new_sheet.write(old_rows, 3, "失败", style)
