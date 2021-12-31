@@ -14,7 +14,7 @@ class GoodsManagementpage(BasePage):
     goods_category = (By.XPATH, "//form//div//span/span")
 
     # 一级类目
-    first_category = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li[1]")
+    first_category = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li[15]")
     
     # 二级类目
     second_category = (By.XPATH, "//ul/li[span='户外']")

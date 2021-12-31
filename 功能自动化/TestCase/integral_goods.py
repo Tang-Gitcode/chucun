@@ -53,7 +53,7 @@ class integral_Goods(unittest.TestCase):
         # 手机验证码登录
         driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
         time.sleep(2)
-        driver.find_element(By.NAME, "mobile").send_keys("16620129737")
+        driver.find_element(By.NAME, "mobile").send_keys("13017167459")
         time.sleep(2)
         driver.find_element(By.XPATH, "//div[@class='van-field__button']//span").click()
         time.sleep(30)
@@ -79,6 +79,7 @@ class integral_Goods(unittest.TestCase):
     def test_integralGoods(self):
         try:
             i = 0
+            n = 92
             while True:
                 element_login = True
                 try:
@@ -151,12 +152,13 @@ class integral_Goods(unittest.TestCase):
                                 goods_name = driver.find_element(By.XPATH, "//div[@class='van-card__content']//div/div").text
                                 list_goods_name = ''.join(goods_name)
                                 print(f"下单成功：\t订单编号：{list_order_sn}")
-                                print(f"\t商品名称：{list_goods_name}")
+                                print(f"下单成功：\t商品名称：{list_goods_name}")
                                 time.sleep(3)
 
+                                
                                 try:
                                     # 打开excel
-                                    word_book = xlrd.open_workbook('output.xls', formatting_info=True)
+                                    word_book = xlrd.open_workbook('京东商品下单.xls', formatting_info=True)
                                     
                                     #格式信息
                                     style = xlwt.XFStyle()
@@ -179,15 +181,16 @@ class integral_Goods(unittest.TestCase):
                                     # 将xlrd对象变成xlwt
                                     new_work_book = copy(word_book)
                                     # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("12.24")
+                                    new_sheet = new_work_book.get_sheet("12.29")
                                     # 追加内容
-                                    n = "%03d" % (i+1)
-                                    new_sheet.write(old_rows, 0, n, style)
+                                    num = "%03d" % (n+1)
+                                    new_sheet.write(old_rows, 0, num, style)
                                     new_sheet.write(old_rows, 1, list_order_sn, style)
                                     new_sheet.write(old_rows, 2, list_goods_name, style)
                                     new_sheet.write(old_rows, 3, "成功", style)
                                     # 保存                                 
-                                    new_work_book.save('output.xls')
+                                    new_work_book.save('京东商品下单.xls')
+                                    n += 1
 
                                     print('追加成功！')
                                 except Exception as e: 
@@ -227,7 +230,7 @@ class integral_Goods(unittest.TestCase):
 
                                 try:
                                     # 打开excel
-                                    word_book = xlrd.open_workbook('output.xls', formatting_info=True)
+                                    word_book = xlrd.open_workbook('京东商品下单.xls', formatting_info=True)
                                     #格式信息
                                     style = xlwt.XFStyle()
                                     #字体基本设置
@@ -251,16 +254,17 @@ class integral_Goods(unittest.TestCase):
                                     # 将xlrd对象变成xlwt
                                     new_work_book = copy(word_book)
                                     # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("12.24")
+                                    new_sheet = new_work_book.get_sheet("12.29")
                                     # 追加内容
-                                    n = "%03d" % (i+1)
-                                    new_sheet.write(old_rows, 0, n, style)
+                                    num = "%03d" % (n+1)
+                                    new_sheet.write(old_rows, 0, num, style)
                                     new_sheet.write(old_rows, 2, list_failure_goods, style)
                                     new_sheet.write(old_rows, 3, "失败", style)
                                     new_sheet.write(old_rows, 4, "下单失败", style)
                                     # 保存
-                                    new_work_book.save('output.xls')
+                                    new_work_book.save('京东商品下单.xls')
                                     print('追加成功！')
+                                    n += 1
                                 except Exception as e: 
                                     print('追加失败！',e)
                                 time.sleep(3)
