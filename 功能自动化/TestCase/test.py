@@ -19,9 +19,25 @@
 #         list = sheet.cell_value(j, i)
 #         print(list)
 
-import pandas as pd
-df = pd.read_excel('C:/Users/administered/Desktop/goods.xls')
-data = df.values
+# import pandas as pd
+# df = pd.read_excel('C:/Users/administered/Desktop/goods.xls')
+# data = df.values
 
 
-print(data[0][0])
+# print(data[0][0])
+
+class people:
+    #定义基本属性
+    name = ''
+    age = 0
+    #定义私有属性，私有属性在类外部无法直接进行访问
+    _weight = 0
+    #定义构造方法
+    def __init__(self,n,a,w):
+        self.name = n
+        self.age = a
+        self._weight = w
+    def speak(self):
+        print("%s 说:我%d岁。" %(self.name,self.age))
+p = people('runnob', 10, 30)
+p.speak()

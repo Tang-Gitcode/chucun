@@ -1,4 +1,4 @@
-"""京东商品仓库中上架"""
+"""总系统京东商品仓库中上架"""
 
 
 from time import sleep
@@ -66,7 +66,7 @@ class Create_goods(unittest.TestCase):
 
         # 点击批量上架
         driver.find_element(By.XPATH, "//button[@type='button']/following::button[4]").click()
-        sleep(2)
+        sleep(10)
 
         # 点击确定
         driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div[4]/div/div[2]/div/div[6]/div/div[3]/span/button").click()

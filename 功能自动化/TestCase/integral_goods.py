@@ -28,7 +28,7 @@ class integral_Goods(unittest.TestCase):
         driver.maximize_window()
 
         # 加载地址
-        driver.get("http://t-mintegral437.helitong.cn/#/AccountLogin")
+        driver.get("http://t-mintegral437.helitong.cn/#/VerificationLogin")
         time.sleep(5)
 
 
@@ -51,8 +51,8 @@ class integral_Goods(unittest.TestCase):
 
         
         # 手机验证码登录
-        driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
-        time.sleep(2)
+        # driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
+        # time.sleep(2)
         driver.find_element(By.NAME, "mobile").send_keys("13017167459")
         time.sleep(2)
         driver.find_element(By.XPATH, "//div[@class='van-field__button']//span").click()
@@ -61,6 +61,27 @@ class integral_Goods(unittest.TestCase):
         # 点击登录
         driver.find_element(By.XPATH, "//button[@type='submit']").click()
         time.sleep(5)
+
+        # # 返回上一页
+        # driver.back()
+        # time.sleep(5)
+
+        # # 点击登录/注册
+        # driver.find_element(By.XPATH, "//div[@class='page_popup']/button").click()
+        # time.sleep(2)
+
+        # # 输入账号
+        # driver.find_element(By.XPATH, "//input[@placeholder='请输入手机号']/following::input[2]").send_keys("13017167459")
+        # time.sleep(1)
+
+        # # 输入账号密码
+        # driver.find_element(By.XPATH, "//input[@placeholder='请输入账号密码']").send_keys("t123456")
+        # time.sleep(1)
+
+        # # 点击登录
+        # driver.find_element(By.XPATH, "//div[span=' 登录 ']/following::span[4]").click()
+        # time.sleep(5)
+
 
         button1 = True
         try:
@@ -79,7 +100,7 @@ class integral_Goods(unittest.TestCase):
     def test_integralGoods(self):
         try:
             i = 0
-            n = 92
+            n = 0
             while True:
                 element_login = True
                 try:
@@ -322,6 +343,10 @@ class integral_Goods(unittest.TestCase):
 
                     # 点击登录
                     driver.find_element(By.XPATH, "//button[@type='submit']").click()
+                    time.sleep(2)
+
+                    # 返回上一页
+                    driver.back()
                     time.sleep(5)
                 else:
                     continue
