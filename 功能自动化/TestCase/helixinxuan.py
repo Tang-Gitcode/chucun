@@ -60,17 +60,23 @@ class Create_goods(unittest.TestCase):
         driver.find_element(By.XPATH, "//li[span='50条/页']").click()
         sleep(2)
 
+        # 选择全部
+        driver.find_element(By.XPATH, "//div[@class='el-form-item'][6]//span").click()
+        sleep(2)
+        driver.find_element(By.XPATH, "//li[@class='el-select-dropdown__item']/following::li[4]").click()
+        sleep(2)
+
         # 选择全选本页
         driver.find_element(By.XPATH, "//label[span='全选本页']//span[2]").click()
         sleep(2)
 
         # 点击批量上架
         driver.find_element(By.XPATH, "//button[@type='button']/following::button[4]").click()
-        sleep(10)
+        sleep(12)
 
         # 点击确定
-        driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div[4]/div/div[2]/div/div[6]/div/div[3]/span/button").click()
-        sleep(2)
+        driver.find_element(By.XPATH, "//span[@class='dialog-footer']/following::span[11]/button").click()
+        sleep(5)
 
         
         while True:
@@ -96,11 +102,11 @@ class Create_goods(unittest.TestCase):
 
                 # 点击批量上架
                 driver.find_element(By.XPATH, "//button[@type='button']/following::button[4]").click()
-                sleep(10)
+                sleep(12)
 
                 # 点击确定
-                driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div[4]/div/div[2]/div/div[6]/div/div[3]/span/button").click()
-                sleep(2)
+                driver.find_element(By.XPATH, "//span[@class='dialog-footer']/following::span[11]/button").click()
+                sleep(5)
 
             else:
 
@@ -118,11 +124,11 @@ class Create_goods(unittest.TestCase):
 
                 # 点击批量上架
                 driver.find_element(By.XPATH, "//button[@type='button']/following::button[4]").click()
-                sleep(10)
+                sleep(12)
 
                 # 点击确定
-                driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div[4]/div/div[2]/div/div[6]/div/div[3]/span/button").click()
-                sleep(2)
+                driver.find_element(By.XPATH, "//span[@class='dialog-footer']/following::span[11]/button").click()
+                sleep(5)
 
 
     def tearDown(self) -> None:

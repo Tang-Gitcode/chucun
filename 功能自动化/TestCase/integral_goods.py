@@ -23,11 +23,7 @@ class integral_Goods(unittest.TestCase):
         driver.maximize_window()
 
         # 加载地址
-<<<<<<< HEAD
-        driver.get("http://t-mintegral437.helitong.cn/#/VerificationLogin")
-=======
         driver.get("http://t-mintegral9.helitong.cn/#/AccountLogin")
->>>>>>> 5d6bdd5 (积分商城下单优化)
         time.sleep(5)
 
 
@@ -50,13 +46,8 @@ class integral_Goods(unittest.TestCase):
 
         
         # 手机验证码登录
-<<<<<<< HEAD
-        # driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
-        # time.sleep(2)
-=======
         driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
         time.sleep(2)
->>>>>>> 5d6bdd5 (积分商城下单优化)
         driver.find_element(By.NAME, "mobile").send_keys("13017167459")
         time.sleep(2)
         driver.find_element(By.XPATH, "//div[@class='van-field__button']//span").click()
@@ -191,7 +182,6 @@ class integral_Goods(unittest.TestCase):
                             """结算页面"""
                             button = True
                             try:
-<<<<<<< HEAD
                                 # 查看订单
                                 driver.find_element(By.XPATH, "//div[@class='success']//button[2]").click()
                                 time.sleep(2)
@@ -254,7 +244,6 @@ class integral_Goods(unittest.TestCase):
                                 except Exception as e: 
                                     print('追加失败！',e)
                                 time.sleep(3)
-=======
                                 integral = True
                                 try:
                                     # 选择使用积分
@@ -478,7 +467,6 @@ class integral_Goods(unittest.TestCase):
                                         driver.find_element(By.XPATH, " //div[@class='van-cell']").click()
                                         time.sleep(3)
                                         i += 1
->>>>>>> 5d6bdd5 (积分商城下单优化)
 
                             except:
                                 button = False
@@ -490,126 +478,120 @@ class integral_Goods(unittest.TestCase):
 
                                 # 退回一步
                                 driver.back()
-<<<<<<< HEAD
                                 time.sleep(2)
 
-                                """回到首页"""  
-                                driver.back()               
+                                """回到首页"""
+                                driver.back()
                                 # driver.find_element(By.XPATH, "//div[@class='success']//button").click()
                                 time.sleep(2)
                                 i += 1
-                            except:
-                                element_click = False
-                            if element_click == False:
-                                # 点击取消
-                                driver.find_element(By.XPATH, " //div[@class='buttons-bar']//button").click()
-                                time.sleep(2)
+                        except:
+                            element_click = False
+                        if element_click == False:
+                            # 点击取消
+                            driver.find_element(By.XPATH, " //div[@class='buttons-bar']//button").click()
+                            time.sleep(2)
 
-                                """获取商品名称"""
-                                failure_goods = driver.find_element(By.XPATH, " //div[@class='van-card__content']//div/div").text
-                                list_failure_goods = ''.join(failure_goods)
-                                print(f"下单失败：\t商品名称：{list_failure_goods}")
-                                time.sleep(3)
+                            """获取商品名称"""
+                            failure_goods = driver.find_element(By.XPATH, " //div[@class='van-card__content']//div/div").text
+                            list_failure_goods = ''.join(failure_goods)
+                            print(f"下单失败：\t商品名称：{list_failure_goods}")
+                            time.sleep(3)
 
-                                try:
-                                    # 打开excel
-                                    word_book = xlrd.open_workbook('京东商品下单.xls', formatting_info=True)
-                                    #格式信息
-                                    style = xlwt.XFStyle()
-                                    #字体基本设置
-                                    font = xlwt.Font()
-                                    # 设置字体
-                                    font.name = u'等线'
-                                    # 字体颜色
-                                    font.colour_index = 2       # 指定colour_index索引
-                                    # 设置字号
-                                    font.height= 220
-                                    style.font = font
+                            try:
+                                # 打开excel
+                                word_book = xlrd.open_workbook('京东商品下单.xls', formatting_info=True)
+                                #格式信息
+                                style = xlwt.XFStyle()
+                                #字体基本设置
+                                font = xlwt.Font()
+                                # 设置字体
+                                font.name = u'等线'
+                                # 字体颜色
+                                font.colour_index = 2       # 指定colour_index索引
+                                # 设置字号
+                                font.height= 220
+                                style.font = font
 
-                                    # 获取所有的sheet表单。
-                                    sheets = word_book.sheet_names()
-                                    # 获取第一个表单
-                                    work_sheet = word_book.sheet_by_name(sheets[0])
-                                    # 获取已经写入的行数
-                                    old_rows = work_sheet.nrows
-                                    # 获取表头信息
-                                    # heads = work_sheet.row_values(0)
-                                    # 将xlrd对象变成xlwt
-                                    new_work_book = copy(word_book)
-                                    # 添加内容到指定工作表
-                                    new_sheet = new_work_book.get_sheet("12.29")
-                                    # 追加内容
-                                    num = "%03d" % (n+1)
-                                    new_sheet.write(old_rows, 0, num, style)
-                                    new_sheet.write(old_rows, 2, list_failure_goods, style)
-                                    new_sheet.write(old_rows, 3, "失败", style)
-                                    new_sheet.write(old_rows, 4, "下单失败", style)
-                                    # 保存
-                                    new_work_book.save('京东商品下单.xls')
-                                    print('追加成功！')
-                                    n += 1
-                                except Exception as e: 
-                                    print('追加失败！',e)
-                                time.sleep(3)
+                                # 获取所有的sheet表单。
+                                sheets = word_book.sheet_names()
+                                # 获取第一个表单
+                                work_sheet = word_book.sheet_by_name(sheets[0])
+                                # 获取已经写入的行数
+                                old_rows = work_sheet.nrows
+                                # 获取表头信息
+                                # heads = work_sheet.row_values(0)
+                                # 将xlrd对象变成xlwt
+                                new_work_book = copy(word_book)
+                                # 添加内容到指定工作表
+                                new_sheet = new_work_book.get_sheet("12.29")
+                                # 追加内容
+                                num = "%03d" % (n+1)
+                                new_sheet.write(old_rows, 0, num, style)
+                                new_sheet.write(old_rows, 2, list_failure_goods, style)
+                                new_sheet.write(old_rows, 3, "失败", style)
+                                new_sheet.write(old_rows, 4, "下单失败", style)
+                                # 保存
+                                new_work_book.save('京东商品下单.xls')
+                                print('追加成功！')
+                                n += 1
+                            except Exception as e:
+                                print('追加失败！',e)
+                            time.sleep(3)
 
-                                # 点击返回
-                                driver.find_element(By.XPATH, " //div[@class='van-cell']").click()
-                                time.sleep(3)
-                                # 点击返回
-                                driver.find_element(By.XPATH, " //div[@class='van-cell']").click()
-=======
->>>>>>> 5d6bdd5 (积分商城下单优化)
-                                time.sleep(3)
-                                i += 1
+                            # 点击返回
+                            driver.find_element(By.XPATH, " //div[@class='van-cell']").click()
+                            time.sleep(3)
+                            # 点击返回
+                            driver.find_element(By.XPATH, " //div[@class='van-cell']").click()
+                            time.sleep(3)
+                            i += 1
 
-                except:
-                    element_login = False
+                    except:
+                        element_login = False
+                    if element_login == False:
+                        """登录"""
+                        # # 账号
+                        # driver.find_element(By.XPATH, "//input[@placeholder='请输入登录账号']").send_keys("13017167459")
+                        # time.sleep(1)
+                        # # 输入密码
+                        # driver.find_element(By.NAME, "password").send_keys("t123456")
+                        # time.sleep(1)
 
+                        # # 滑动验证
+                        # button = driver.find_element(By.XPATH, "//div[@class='button']")
+                        # ActionChains(driver).drag_and_drop_by_offset(button,300,0).perform()
+                        # time.sleep(2)
 
-                if element_login == False:
-                    """登录"""
-                    # # 账号
-                    # driver.find_element(By.XPATH, "//input[@placeholder='请输入登录账号']").send_keys("13017167459")
-                    # time.sleep(1)
-                    # # 输入密码
-                    # driver.find_element(By.NAME, "password").send_keys("t123456")
-                    # time.sleep(1)
+                        # # 点击登录
+                        # driver.find_element(By.XPATH, "//button[@type='submit']").click()
+                        # time.sleep(5)
 
-                    # # 滑动验证
-                    # button = driver.find_element(By.XPATH, "//div[@class='button']")
-                    # ActionChains(driver).drag_and_drop_by_offset(button,300,0).perform()
-                    # time.sleep(2)
+                        # 手机验证码登录
+                        driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
+                        time.sleep(2)
+                        driver.find_element(By.NAME, "mobile").send_keys("13017167459")
+                        time.sleep(2)
+                        driver.find_element(By.XPATH, "//div[@class='van-field__button']//span").click()
+                        time.sleep(30)
 
-                    # # 点击登录
-                    # driver.find_element(By.XPATH, "//button[@type='submit']").click()
-                    # time.sleep(5)
+                        # 点击登录
+                        driver.find_element(By.XPATH, "//button[@type='submit']").click()
+                        time.sleep(2)
 
-                    # 手机验证码登录
-                    driver.find_element(By.XPATH, "//div[@class='card_title']//span").click()
-                    time.sleep(2)
-                    driver.find_element(By.NAME, "mobile").send_keys("13017167459")
-                    time.sleep(2)
-                    driver.find_element(By.XPATH, "//div[@class='van-field__button']//span").click()
-                    time.sleep(30)
+                        # 返回上一页
+                        driver.back()
+                        time.sleep(5)
+                    else:
+                        continue
+                    print("运行成功")
+            except Exception as e:
+                print(f"运行失败{e}")
 
-                    # 点击登录
-                    driver.find_element(By.XPATH, "//button[@type='submit']").click()
-                    time.sleep(2)
-
-                    # 返回上一页
-                    driver.back()
-                    time.sleep(5)
-                else:
-                    continue
-                print("运行成功")
-        except Exception as e:
-            print(f"运行失败{e}")
-
-    # 执行完用例后的操作
-    def tearDown(self) -> None:
-        # 退出浏览器
-        driver.quit()
-
+        # 执行完用例后的操作
+        def tearDown(self) -> None:
+            # 退出浏览器
+            driver.quit()
 
 # 测试
 if __name__ == "__main__":
